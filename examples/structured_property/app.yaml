@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+skip_files:
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?\..*$
+- ^(.*/)?test$
+- ^(.*/)?examples$
+
+libraries:
+# Needed for endpoints/users_id_token.py.
+- name: pycrypto
+  version: 2.6
+- name: ssl
+  version: 2.7.11
+
+handlers:
+- url: /_ah/api/.*/product/create
+  script: main.application
+# login: admin
+- url: /_ah/api/.*/products
+  script: main.application

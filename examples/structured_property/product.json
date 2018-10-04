@@ -1,0 +1,12 @@
+{
+    "title": "My First Product",
+    "target_demographic": {
+        "gender": "z",
+        "education" : "some",
+        "interests" : {
+            "technology" : true,
+            "math" : false,
+            "politics" : true
+        }
+    }
+}
